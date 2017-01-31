@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF712CBC1E3DEC890003C2DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF712CBB1E3DEC890003C2DA /* AppDelegate.swift */; };
+		BF712CBE1E3DEC890003C2DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF712CBD1E3DEC890003C2DA /* ViewController.swift */; };
+		BF712CC11E3DEC890003C2DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF712CBF1E3DEC890003C2DA /* Main.storyboard */; };
+		BF712CC31E3DEC890003C2DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF712CC21E3DEC890003C2DA /* Assets.xcassets */; };
+		BF712CC61E3DEC890003C2DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF712CC41E3DEC890003C2DA /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BF712CB81E3DEC890003C2DA /* AddAnimToVideoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddAnimToVideoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF712CBB1E3DEC890003C2DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF712CBD1E3DEC890003C2DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF712CC01E3DEC890003C2DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF712CC21E3DEC890003C2DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF712CC51E3DEC890003C2DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF712CC71E3DEC890003C2DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF712CB51E3DEC890003C2DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF712CAF1E3DEC890003C2DA = {
+			isa = PBXGroup;
+			children = (
+				BF712CBA1E3DEC890003C2DA /* AddAnimToVideoDemo */,
+				BF712CB91E3DEC890003C2DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF712CB91E3DEC890003C2DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF712CB81E3DEC890003C2DA /* AddAnimToVideoDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF712CBA1E3DEC890003C2DA /* AddAnimToVideoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BF712CBB1E3DEC890003C2DA /* AppDelegate.swift */,
+				BF712CBD1E3DEC890003C2DA /* ViewController.swift */,
+				BF712CBF1E3DEC890003C2DA /* Main.storyboard */,
+				BF712CC21E3DEC890003C2DA /* Assets.xcassets */,
+				BF712CC41E3DEC890003C2DA /* LaunchScreen.storyboard */,
+				BF712CC71E3DEC890003C2DA /* Info.plist */,
+			);
+			path = AddAnimToVideoDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF712CB71E3DEC890003C2DA /* AddAnimToVideoDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF712CCA1E3DEC890003C2DA /* Build configuration list for PBXNativeTarget "AddAnimToVideoDemo" */;
+			buildPhases = (
+				BF712CB41E3DEC890003C2DA /* Sources */,
+				BF712CB51E3DEC890003C2DA /* Frameworks */,
+				BF712CB61E3DEC890003C2DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AddAnimToVideoDemo;
+			productName = AddAnimToVideoDemo;
+			productReference = BF712CB81E3DEC890003C2DA /* AddAnimToVideoDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF712CB01E3DEC890003C2DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Nimbosa;
+				TargetAttributes = {
+					BF712CB71E3DEC890003C2DA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = R846QUGXSY;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BF712CB31E3DEC890003C2DA /* Build configuration list for PBXProject "AddAnimToVideoDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF712CAF1E3DEC890003C2DA;
+			productRefGroup = BF712CB91E3DEC890003C2DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF712CB71E3DEC890003C2DA /* AddAnimToVideoDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF712CB61E3DEC890003C2DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF712CC61E3DEC890003C2DA /* LaunchScreen.storyboard in Resources */,
+				BF712CC31E3DEC890003C2DA /* Assets.xcassets in Resources */,
+				BF712CC11E3DEC890003C2DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF712CB41E3DEC890003C2DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF712CBE1E3DEC890003C2DA /* ViewController.swift in Sources */,
+				BF712CBC1E3DEC890003C2DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF712CBF1E3DEC890003C2DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF712CC01E3DEC890003C2DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF712CC41E3DEC890003C2DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF712CC51E3DEC890003C2DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF712CC81E3DEC890003C2DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF712CC91E3DEC890003C2DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF712CCB1E3DEC890003C2DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R846QUGXSY;
+				INFOPLIST_FILE = AddAnimToVideoDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Nimbosa.AddAnimToVideoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BF712CCC1E3DEC890003C2DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R846QUGXSY;
+				INFOPLIST_FILE = AddAnimToVideoDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Nimbosa.AddAnimToVideoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF712CB31E3DEC890003C2DA /* Build configuration list for PBXProject "AddAnimToVideoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF712CC81E3DEC890003C2DA /* Debug */,
+				BF712CC91E3DEC890003C2DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF712CCA1E3DEC890003C2DA /* Build configuration list for PBXNativeTarget "AddAnimToVideoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF712CCB1E3DEC890003C2DA /* Debug */,
+				BF712CCC1E3DEC890003C2DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF712CB01E3DEC890003C2DA /* Project object */;
+}
