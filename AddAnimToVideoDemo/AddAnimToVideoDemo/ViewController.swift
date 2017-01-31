@@ -50,7 +50,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let videoLayer:CALayer = CALayer()
         videoLayer.frame = CGRect(x: 0.0, y: 0.0, width: winWidth, height: winHeight)
         
-        
         parentLayer.addSublayer(videoLayer)
         parentLayer.addSublayer(animLayer)
         
@@ -101,8 +100,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     /// 导出时使用mutableVideoComposition
     func addAnimToVideo(){
         let videoAssetTrack:AVAssetTrack = (videoAsset?.tracks(withMediaType: AVMediaTypeVideo)[0])!
-        let winWidth:CGFloat = videoAssetTrack.naturalSize.width
-        let winHeight:CGFloat = videoAssetTrack.naturalSize.height
+        let videoSize = self.getVideoAssetSize(videoAsset: videoAsset!)
         
         
         let composition:AVMutableComposition = AVMutableComposition()
@@ -111,13 +109,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
         var videoComposition:AVMutableVideoComposition = AVMutableVideoComposition()
-        videoComposition.renderSize = CGSize(width: winWidth, height: winHeight)
+        videoComposition.renderSize = videoSize
         videoComposition.frameDuration = CMTimeMake(1, 30)
         
         let instruction:AVMutableVideoCompositionInstruction = AVMutableVideoCompositionInstruction()
         instruction.timeRange = CMTimeRangeMake(kCMTimeZero, (videoAsset?.duration)!)
         let videoLayerInstruction:AVMutableVideoCompositionLayerInstruction = AVMutableVideoCompositionLayerInstruction(assetTrack: videoTrack)
-        videoLayerInstruction.setTransform(videoTrack.preferredTransform, at: kCMTimeZero)
+        
+        let isPortrait:Bool = self.isVideoPortrait(videoAsset: videoAsset!)
+        
+        if isPortrait {
+            let videoTransform:CGAffineTransform = videoAssetTrack.preferredTransform.translatedBy(x: 0.0, y: -320.0)
+
+            videoLayerInstruction.setTransform(videoTransform, at: kCMTimeZero)
+        } else {
+            videoLayerInstruction.setTransform(videoAssetTrack.preferredTransform, at: kCMTimeZero)
+        }
+        
         videoLayerInstruction.setOpacity(0.0, at: (videoAsset?.duration)!)
         instruction.layerInstructions = [videoLayerInstruction]
         videoComposition.instructions = [instruction]
@@ -132,7 +140,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             try audioTrack.insertTimeRange(CMTimeRangeMake(kCMTimeZero, (videoAsset?.duration)!), of: (videoAsset?.tracks(withMediaType: AVMediaTypeAudio)[0])!, at: kCMTimeZero)
             
             // 为videoComposition添加动画layer
-            videoComposition = self.addAnimToComposition(composition: videoComposition, rect: videoAssetTrack.naturalSize)
+            videoComposition = self.addAnimToComposition(composition: videoComposition, rect: videoSize)
             
             // 导出视频,保存到相册
             var fileUrl:URL = FileManager.default.temporaryDirectory.absoluteURL
@@ -159,6 +167,67 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         
+    }
+    
+    
+    /// 判断视频是否是portrait模式
+    ///
+    /// - parameter videoAsset: 视频Asset
+    ///
+    /// - returns: 是否是portrait模式
+    func isVideoPortrait(videoAsset:AVAsset) -> Bool {
+        let videoAssetTrack:AVAssetTrack = videoAsset.tracks(withMediaType: AVMediaTypeVideo)[0]
+        
+        // 判断视频是否是portrait模式
+        var isVideoAssetPortrait = false
+        let videoTransform:CGAffineTransform = videoAssetTrack.preferredTransform
+        
+        if videoTransform.a == 0 && videoTransform.b == 1.0 && videoTransform.c == -1.0 && videoTransform.d == 0 {
+            //            videoAssetOrientation_ = UIImageOrientationRight;
+            isVideoAssetPortrait = true;
+        }
+        if videoTransform.a == 0 && videoTransform.b == -1.0 && videoTransform.c == 1.0 && videoTransform.d == 0 {
+            //            videoAssetOrientation_ =  UIImageOrientationLeft;
+            //            isVideoAssetPortrait_ = YES;
+            isVideoAssetPortrait = true
+        }
+        if videoTransform.a == 1.0 && videoTransform.b == 0 && videoTransform.c == 0 && videoTransform.d == 1.0 {
+            //            videoAssetOrientation_ =  UIImageOrientationUp;
+        }
+        if (videoTransform.a == -1.0 && videoTransform.b == 0 && videoTransform.c == 0 && videoTransform.d == -1.0) {
+            //            videoAssetOrientation_ = UIImageOrientationDown;
+        }
+        
+        
+        return isVideoAssetPortrait
+
+    }
+    
+    
+    
+    /// 获取视频的宽高
+    ///
+    /// - parameter videoAsset: 视频Asset
+    ///
+    /// - returns: 视频的宽高尺寸
+    func getVideoAssetSize(videoAsset:AVAsset) -> CGSize {
+        var size:CGSize;
+        
+        let videoAssetTrack:AVAssetTrack = videoAsset.tracks(withMediaType: AVMediaTypeVideo)[0]
+        
+        size = videoAssetTrack.naturalSize
+        
+        // 判断食品是否是portrait模式
+        let isVideoAssetPortrait = self.isVideoPortrait(videoAsset: videoAsset)
+        
+        
+        if isVideoAssetPortrait {
+            size = CGSize(width: videoAssetTrack.naturalSize.height, height: videoAssetTrack.naturalSize.width)
+        } else {
+            size = videoAssetTrack.naturalSize;
+        }
+        
+        return size
     }
     
     
